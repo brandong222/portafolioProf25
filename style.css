@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to left, rgb(30, 30, 51),rgb(43, 40, 75));
+}
+
+/* SECTION ONE- PROFILE*/
+
+.sec_profile{
+    min-height: 100vh;
+}
+
+.sec_profile{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pro_title{
+    flex: 0.5;
+    padding: 30px;
+}
+
+span{
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+span:hover{
+    cursor: pointer;
+    color: rgb(85, 81, 81);
+}
+
+.pro_data{
+    flex: 4;
+    padding: 0px 30px;
+    display: flex;
+
+}
+
+.data_main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0px;
+}
+
+.data_main img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    object-fit: cover;
+}
+.data_main h4, .data_main h2{
+    margin: 15px 0px;
+    color: white;
+}
+
+.data_main h4{
+    color: gold;
+}
+
+
+
+.data_second{
+    flex: 1;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.data_second div{
+    width: 80%;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    padding: 1px;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px;
+}
+
+.data_second div:hover{
+    border: 1px solid rgb(43, 40, 75);
+    color: rgb(43, 40, 75);
+    background: gold;
+    cursor: pointer;
+}
+
+.data_three{
+    flex: 0.6;
+    padding: 100px 10px;
+    
+}
+
+
+
+
+/* SECTION TWO - Projects*/
+
+.sec_project{
+    min-height: 100vh;
+}
+
+.card_projects{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    width: 200px;
+    height: 240px;
+    background: rgb(43, 40, 75);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 3px white;
+    transition: all 0.3 ease-in;
+}
+
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px white;
+}
+
+.card img{
+    flex: 1;
+    object-fit: cover;
+}
+
+.card .name{
+    flex: 0.3;
+    padding: 5px;
+    color: white;
+}
+
+.card .type{
+    flex: 0.3;
+    color: gold;
+}
+
+.sec_contact{
+    min-height: 100vh;
+}
+
+.con_info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 50vh;
+    justify-content: space-evenly;
+}
+
+.con_info div{
+    width: 40%;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid white;
+    transition: all 0.4s ease-in-out;
+}
+
+.con_info div:hover{
+    border: 1px solid rgb(43, 40, 75);
+    color: rgb(43, 40, 75);
+    background: white;
+    cursor: pointer;
+}
+
+
+/*Estilos control de perfil para javascript +ocultar+ */
+
+.s1, .s2, .s3, .s4{
+    display: none;
+}
+
+
+.s0{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s0 p{
+    color: white;
+    font-size: 28px;
+    font-style: italic;
+}
+
+/*perfil section one - profile*/
+
+
+.s1 div, .s2 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px 0px;
+}
+
+.s1 div span, .s2 div span{
+    padding: 2px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.s1 div span:hover,  .s2 div span:hover{
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
+
+.s1 div p, .s2 div p{
+    color: gold;
+}
+
+.s1 div p:hover{
+    cursor: text;
+}
+
+
+.s1 div p a{
+    list-style: none;
+    text-decoration: none;
+    color: gold;
+}
+
+
+/*perfil section one - value*/
+
+.s3 div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    margin: 15px 0px;
+}
+
+.s3 div img{
+    width: 60px;
+    height:60px;
+    object-fit: cover;
+}
+
+
+.s4{
+    background: linear-gradient(to left,orange, gold , white);
+    background-clip: text;
+}
+
+.s4 p{
+    color: transparent;
+    font-size: 21px;
+    text-align: right;
+
+}
+
