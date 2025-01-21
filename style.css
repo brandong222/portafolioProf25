@@ -134,7 +134,6 @@ span:hover{
 
 
 .card:hover{
-    cursor: pointer;
     box-shadow: 0px 0px 10px white;
 }
 
