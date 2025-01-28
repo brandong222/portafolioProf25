@@ -1,14 +1,121 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body{
-    width: 100%;
-    height: auto;
-    background: linear-gradient(to left, rgb(30, 30, 51),rgb(43, 40, 75));
+body {
+    background: #1e2a38;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    padding-left: 10%;
 }
+
+
+/*HOME- where begin the portafolio */
+
+.home_main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    position: fixed;
+    background: #2d3e50;
+    width: 10%;
+    left: 0px;
+}
+
+nav {
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav h1 {
+    flex: 1;
+    text-align: center;
+    margin-top: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 3px #1e2a38; 
+}
+
+nav ul {
+    flex: 3;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #ffffff; 
+    text-shadow: 2px 2px 5px #1E2F40; 
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    text-shadow: 2px 1px 4px #4682B4;
+    cursor: pointer;
+}
+
+.sec_main_home {
+    margin: auto;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.sec_top {
+    flex: 1;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.sec_top .card {
+    background: rgba(173, 216, 230, 0.7); 
+    padding: 15px 30px;
+    border-radius: 40px;
+    animation: shadow_card 2s infinite;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+}
+
+.sec_top .card:hover {
+    background: #00BFFF; 
+    box-shadow: 2px 2px 25px #00BFFF;
+    animation: none;
+}
+
+@keyframes shadow_card {
+    0% {
+        box-shadow: 2px 2px 5px #ADD8E6; 
+    }
+    45% {
+        box-shadow: 2px 4px 10px #ADD8E6; 
+    }
+    75% {
+        box-shadow: 2px 2px 12px #ADD8E6; 
+    }
+    100% {
+        box-shadow: 2px 2px 9px #ADD8E6; 
+    }
+}
+
+
+
 
 /* SECTION ONE- PROFILE*/
 
@@ -27,6 +134,12 @@ body{
     padding: 30px;
 }
 
+.pro_title span {
+    color: #ffffff; 
+    font-size: 36px;
+    font-weight: bold;
+}
+
 span{
     color: white;
     font-size: 40px;
@@ -36,7 +149,7 @@ span{
 
 span:hover{
     cursor: pointer;
-    color: rgb(85, 81, 81);
+    color: rgb(165, 164, 164);
 }
 
 .pro_data{
@@ -66,9 +179,14 @@ span:hover{
     color: white;
 }
 
-.data_main h4{
-    color: gold;
+
+
+
+.data_main h4 {
+    color: #00BFFF; 
 }
+
+
 
 
 
@@ -93,11 +211,15 @@ span:hover{
 }
 
 .data_second div:hover{
-    border: 1px solid rgb(43, 40, 75);
-    color: rgb(43, 40, 75);
-    background: gold;
+   
     cursor: pointer;
+    background: #4a90e2; /* Azul brillante */
+    border-color: #4a90e2;
+    color: white;
 }
+
+
+
 
 .data_three{
     flex: 0.6;
@@ -121,37 +243,51 @@ span:hover{
 }
 
 
-.card{
+.card_projects .card{
     width: 200px;
     height: 240px;
-    background: rgb(43, 40, 75);
     display: flex;
     flex-direction: column;
     text-align: center;
     box-shadow: 0px 0px 3px white;
-    transition: all 0.3 ease-in;
+    background: #2d3e50;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0px 0px 10px 0px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 
-.card:hover{
-    box-shadow: 0px 0px 10px white;
+.card_projects .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.card img{
+.card_projects .card img{
     flex: 1;
     object-fit: cover;
 }
 
-.card .name{
+.card_projects .card .name{
     flex: 0.3;
     padding: 5px;
     color: white;
 }
 
-.card .type{
+.card_projects .card .type{
     flex: 0.3;
-    color: gold;
+    color: #f5a623;
 }
+
+.card_projects .card .type a {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+.card .type a:hover {
+    text-decoration: underline;
+}
+
 
 .sec_contact{
     min-height: 100vh;
@@ -168,17 +304,18 @@ span:hover{
 
 .con_info div{
     width: 40%;
-    color: white;
-    padding: 8px;
     text-align: center;
-    border: 1px solid white;
-    transition: all 0.4s ease-in-out;
+    border: 2px solid #4a90e2;
+    color: #4a90e2;
+    background: transparent;
+    border-radius: 8px;
+    padding: 12px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .con_info div:hover{
-    border: 1px solid rgb(43, 40, 75);
-    color: rgb(43, 40, 75);
-    background: white;
+    background: #4a90e2;
+    color: white;
     cursor: pointer;
 }
 
@@ -227,7 +364,7 @@ span:hover{
 }
 
 .s1 div p, .s2 div p{
-    color: gold;
+    color: #00BFFF;
 }
 
 .s1 div p:hover{
@@ -238,7 +375,7 @@ span:hover{
 .s1 div p a{
     list-style: none;
     text-decoration: none;
-    color: gold;
+    color: #00BFFF;
 }
 
 
@@ -260,14 +397,15 @@ span:hover{
 
 
 .s4{
-    background: linear-gradient(to left,orange, gold , white);
+    background: linear-gradient(to left,#4682B4, #4682B4 , #ADD8E6);
     background-clip: text;
 }
 
 .s4 p{
     color: transparent;
-    font-size: 21px;
+    font-size: 16px;
     text-align: right;
 
 }
+
 

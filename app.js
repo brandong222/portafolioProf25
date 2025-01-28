@@ -1,41 +1,19 @@
 var bandera_perfil = 0;
 
 function opciones(opcion) {
-    this.desactivador()
-  switch (opcion) {
-    case 0:
-      alert("0");
-      break;
-    case 1:
-      var selector = document.querySelector(".s1");
-      var category = document.querySelector(".p1")
-    
-      this.activador(selector, category);
-      break;
-    case 2:
-      var selector = document.querySelector(".s2");
-      var category = document.querySelector(".p2")
- 
-      this.activador(selector, category);
-      break;
+  desactivador();
 
-    case 3:
-      var category = document.querySelector(".p3")
-      var selector = document.querySelector(".s3");
-  
-      this.activador(selector, category);
-      break;
-    case 4:
-      var category = document.querySelector(".p4")
-      var selector = document.querySelector(".s4");
-      this.activador(selector, category);
-      break;
-
-    default:
-        alert("Selecione una opción valida!")
-      break;
+  if (opcion < 1 || opcion > 4) {
+    alert("Seleccione una opción válida!");
+    return;
   }
+
+  const selector = document.querySelector(`.s${opcion}`);
+  const category = document.querySelector(`.p${opcion}`);
+
+  activador(selector, category);
 }
+
 
 function activador(item, category) {
  
@@ -75,4 +53,15 @@ async function desactivador(){
     c3.style.color = "white"
     c4.style.color = "white"
 
+}
+
+
+
+//para control de header nav a section by id
+
+function navSection(sec){
+  alert(sec)
+
+
+  
 }
