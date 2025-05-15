@@ -65,3 +65,17 @@ function navSection(sec){
 
   
 }
+
+
+//para contancto copiar correo 
+
+function copiarCorreo() {
+  const correo = document.getElementById('correo').textContent;
+  navigator.clipboard.writeText(correo).then(function() {
+    const mensaje = document.getElementById('mensaje-copiado');
+    mensaje.style.display = 'block';
+    setTimeout(() => {
+      mensaje.style.display = 'none';
+    }, 1500);
+  });
+}
